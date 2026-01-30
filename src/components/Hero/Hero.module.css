@@ -1,0 +1,96 @@
+.hero {
+    position: relative;
+    height: 90vh;
+    /* Slightly reduced to show content fold */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: white;
+}
+
+.videoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    /* If the video has a white background, we might not need mix-blend-mode if the hero bg is also white. 
+     But if there's overlap or we need to strip it: */
+    mix-blend-mode: multiply;
+}
+
+.waveVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Adjust transform if needed to position the wave better */
+    transform: scale(1.1);
+}
+
+.content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    padding-left: 10%;
+    color: var(--color-primary);
+    /* Ensure text is above the wave */
+}
+
+/* Rest of the typography styles... */
+.label {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    color: #5aa68a;
+    font-weight: 600;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+    color: #4a4a4a;
+    max-width: 450px;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+    background: var(--color-primary);
+    color: var(--white);
+}
+
+.secondaryBtn:hover {
+    background: var(--color-primary);
+    color: var(--white);
+}

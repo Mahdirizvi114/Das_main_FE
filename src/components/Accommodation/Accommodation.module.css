@@ -1,0 +1,190 @@
+.container {
+    min-height: 100vh;
+    padding: 5% 10%;
+    background: var(--background-end-rgb);
+    /* Light gray/white */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sliderContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    background: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.imageViewer {
+    flex: 1;
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.navArrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    transform: translateY(-50%);
+}
+
+.arrow {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.details {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.tabs {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 2rem;
+}
+
+.tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #999;
+}
+
+.tab.active {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.roomTitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    max-width: 80%;
+}
+
+.priceContainer {
+    margin-bottom: 2rem;
+}
+
+.rateLabel {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #5aa68a;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.price {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #5aa68a;
+    margin-right: 0.5rem;
+}
+
+.priceUnit {
+    font-size: 0.8rem;
+    color: #999;
+    font-style: italic;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: auto;
+    /* Push footer down */
+}
+
+.features li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.features li::before {
+    content: '✓';
+    margin-right: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+    padding-top: 2rem;
+}
+
+.designedBy {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+.ctaButton {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    background: var(--color-primary);
+    color: white;
+}

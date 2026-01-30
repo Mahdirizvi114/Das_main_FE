@@ -1,0 +1,56 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 50;
+    color: var(--color-primary);
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+}
+
+.logo {
+    display: block;
+}
+
+.logoImage {
+    height: 80px;
+    /* Adjust height as appropriate for the header */
+    width: auto;
+    object-fit: contain;
+}
+
+.subLogo {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    margin-top: 0.2rem;
+    opacity: 0.8;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
