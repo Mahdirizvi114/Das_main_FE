@@ -112,15 +112,30 @@
     .card {
         flex-direction: column;
         height: auto;
-        min-height: 100vh;
+        min-height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        width: 90%;
     }
 
     .imageCol {
-        height: 50vh;
+        height: 300px;
         flex: none;
     }
 
     .contentCol {
         padding: 3rem 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .hostName {
+        font-size: 2.5rem;
+    }
+
+    .quote {
+        font-size: 1.1rem;
     }
 }

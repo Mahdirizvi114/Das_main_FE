@@ -214,3 +214,27 @@
     mix-blend-mode: multiply;
     /* Blends the white background away */
 }
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        width: 90%;
+    }
+
+    .imageCol {
+        height: 250px;
+        flex: none;
+    }
+
+    .contentCol {
+        padding: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+}

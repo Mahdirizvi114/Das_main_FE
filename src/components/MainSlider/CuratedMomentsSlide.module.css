@@ -113,9 +113,18 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+    .card {
+        height: auto;
+        min-height: auto;
+        max-height: 85vh;
+        width: 90%;
+        overflow-y: auto;
+    }
+
     .visualContainer {
         grid-template-columns: 1fr;
-        grid-template-rows: 40% 60%;
+        grid-template-rows: 250px 300px;
+        /* Explicit heights for mobile */
     }
 
     .rightGrid {
@@ -124,5 +133,9 @@
 
     .sectionTitle {
         font-size: 1.8rem;
+    }
+
+    .overlayContent {
+        padding: 1.5rem;
     }
 }

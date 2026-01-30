@@ -54,3 +54,26 @@
     text-transform: uppercase;
     color: var(--color-primary);
 }
+
+@media (max-width: 900px) {
+    .header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    .logoImage {
+        height: 50px;
+    }
+
+    .logoContainer {
+        top: 0.5rem;
+    }
+
+    .subLogo {
+        font-size: 0.5rem;
+        letter-spacing: 0.2em;
+    }
+
+    .menuButton {
+        font-size: 0.7rem;
+    }
+}

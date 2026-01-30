@@ -214,3 +214,41 @@
     mix-blend-mode: multiply;
     /* Blends the white background away */
 }
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        /* Stack image top, content bottom (since DOM is Image then Content? No, dom is Image then Content in ConferenceSlide. Wait in ConferenceSlide.tsx it is ImageCol then ContentCol.) */
+        /* Code: <div imageCol> <div contentCol> */
+        /* Flex default is row. Content is right. */
+        /* To stack Image Top, create column. */
+        height: auto;
+        min-height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        width: 90%;
+    }
+
+    .imageCol {
+        height: 250px;
+        /* Limit image height */
+        flex: none;
+    }
+
+    .contentCol {
+        padding: 2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .roomTitle {
+        font-size: 1.5rem;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

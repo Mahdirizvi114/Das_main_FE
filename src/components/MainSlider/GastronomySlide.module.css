@@ -112,3 +112,31 @@
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
 }
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+        min-height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
+        width: 90%;
+    }
+
+    .imageCol {
+        height: 250px;
+        flex: none;
+    }
+
+    .contentCol {
+        padding: 2rem;
+    }
+
+    .roomTitle {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}

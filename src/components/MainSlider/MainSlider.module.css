@@ -128,3 +128,58 @@
     background: var(--color-primary);
     color: white;
 }
+
+@media (max-width: 900px) {
+    .card {
+        flex-direction: column-reverse;
+        /* Stack image on top (visually, but flex direction reverse might put it bottom? Usually image top is desired) */
+        /* Let's clarify: if DOM is Content then Image. Column-reverse -> Image Top, Content Bottom. */
+        /* Wait, usually IntroSlide structure is Content then Image. If I want Image Top, I need column-reverse. */
+        /* BUT, other slides might have Image then Content. */
+        /* Since .card is generic here, I should handle flex-direction in specific slides if they differ, OR assume a pattern. */
+        /* IntroSlide: Content, Image. -> Column-reverse gives Image Top. */
+        /* AccommodationSlide: Image, Content. -> Column gives Image Top. */
+        /* This generic .card style applies to IntroSlide mostly? Actually AccommodationSlide uses its own .card style. */
+        /* Let's just set height auto for mobile to allow scrolling */
+        height: auto;
+        min-height: auto;
+        max-height: 85vh;
+        /* Keep it within view or allow scroll? */
+        /* Ideally we want the card to be scrollable internally if needed */
+        overflow-y: auto;
+        width: 90%;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .contentCol {
+        padding: 2rem;
+    }
+
+    .navArrow {
+        width: 40px;
+        height: 40px;
+        top: auto;
+        bottom: 1rem;
+        transform: none;
+    }
+
+    .navArrow:hover {
+        transform: none;
+    }
+
+    .prev {
+        left: 35%;
+        /* Center them roughly */
+        bottom: 1rem;
+    }
+
+    .next {
+        right: 35%;
+        /* Center them roughly */
+        bottom: 1rem;
+        left: auto;
+    }
+}
