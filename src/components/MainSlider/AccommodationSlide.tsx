@@ -87,7 +87,7 @@ const AccommodationSlide = () => {
                 </div>
 
                 <ul className={styles.features}>
-                    {activeContent.features.map((feature, idx) => (
+                    {activeContent.features.map((feature: string, idx: number) => (
                         <li key={idx} className={styles.featureItem}>{feature}</li>
                     ))}
                 </ul>
