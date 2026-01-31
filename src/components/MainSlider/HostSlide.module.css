@@ -4,7 +4,7 @@
     /* Darker theme for the host to stand out or feel premium */
     width: 95%;
     max-width: 1600px;
-    height: 85vh;
+    height: 75vh;
     min-height: 600px;
     display: flex;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
@@ -113,7 +113,7 @@
         flex-direction: column;
         height: auto;
         min-height: auto;
-        max-height: 85vh;
+        max-height: 72vh;
         overflow-y: auto;
         width: 90%;
     }
