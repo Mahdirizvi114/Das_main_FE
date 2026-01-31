@@ -11,7 +11,7 @@ const Header = () => {
                 <span className={styles.subLogo}>MAGDEBURG</span>
             </div>
             <nav className={styles.nav}>
-                <button className={styles.menuButton}>MENU</button>
+                <button className={styles.menuButton}>MENÜ</button>
             </nav>
         </header>
     );

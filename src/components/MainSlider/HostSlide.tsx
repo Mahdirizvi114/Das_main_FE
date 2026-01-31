@@ -15,20 +15,20 @@ const HostSlide = () => {
 
             {/* Right Col: Content */}
             <div className={styles.contentCol}>
-                <h2 className={styles.sectionTitle}>Meet the Host</h2>
-                <span className={styles.subtitle}>YOUR WELCOME PARTNER</span>
+                <h2 className={styles.sectionTitle}>Ihr Gastgeber</h2>
+                <span className={styles.subtitle}>IHR GASTGEBER</span>
 
                 <h3 className={styles.hostName}>Bhupinder Singh</h3>
-                <span className={styles.hostRole}>Owner</span>
+                <span className={styles.hostRole}>Inhaber</span>
 
                 <blockquote className={styles.quote}>
-                    "Hospitality is not just about service; it is about creating a home away from home where every guest feels like family."
+                    "Gastfreundschaft ist nicht nur Service; es geht darum, ein Zuhause fernab von Zuhause zu schaffen, in dem sich jeder Gast wie ein Familienmitglied fühlt."
                 </blockquote>
 
                 <p className={styles.description}>
-                    With a passion for excellence and a heart for service, Bhupinder Singh has dedicated himself to making Das ELB a sanctuary of comfort and culinary delight.
-                    His vision combines the warmth of traditional hospitality with modern luxury, ensuring that every moment of your stay is curated to perfection.
-                    Whether you are here for business, a celebration, or a quiet getaway, he and his team are devoted to making your experience unforgettable.
+                    Mit einer Leidenschaft für Exzellenz und einem Herz für Service hat sich Bhupinder Singh dazu verschrieben, Das ELB zu einem Ort des Komforts und des kulinarischen Genusses zu machen.
+                    Seine Vision verbindet die Herzlichkeit traditioneller Gastfreundschaft mit modernem Luxus und sorgt dafür, dass jeder Moment Ihres Aufenthalts perfekt gestaltet ist.
+                    Ob Sie geschäftlich, für eine Feier oder einen ruhigen Kurzurlaub hier sind, er und sein Team widmen sich ganz Ihrem unvergesslichen Erlebnis.
                 </p>
 
                 <div className={styles.signature}>Bhupinder Singh</div>

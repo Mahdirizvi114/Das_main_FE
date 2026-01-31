@@ -19,27 +19,27 @@ const GastronomySlide = () => {
 
             {/* Right Col: Content */}
             <div className={styles.contentCol}>
-                <h2 className={styles.sectionTitle}>Gastronomy</h2>
+                <h2 className={styles.sectionTitle}>Gastronomie</h2>
                 <span className={styles.subtitle}>DAS ELB KULINARIK</span>
 
-                <h3 className={styles.roomTitle}>A Taste of the Elbe</h3>
+                <h3 className={styles.roomTitle}>Ein Geschmack der Elbe</h3>
 
                 <p className={styles.description}>
-                    Immerse yourself in a culinary journey where regional freshness meets modern creativity.
-                    At Das ELB, we celebrate the art of dining with exquisite dishes prepared from the finest local ingredients.
-                    From dry-aged steaks to delicate seafood, every plate is a masterpiece designed to delight your senses.
-                    Enjoy your meal with a breathtaking view of the river, creating an unforgettable atmosphere of relaxation and indulgence.
+                    Tauchen Sie ein in eine kulinarische Reise, bei der regionale Frische auf moderne Kreativität trifft.
+                    Im Das ELB zelebrieren wir die Kunst des Speisens mit exquisiten Gerichten aus den besten lokalen Zutaten.
+                    Von Dry-Aged Steaks bis hin zu feinen Meeresfrüchten ist jeder Teller ein Meisterwerk, das Ihre Sinne verwöhnen soll.
+                    Genießen Sie Ihr Essen mit einem atemberaubenden Blick auf den Fluss und erleben Sie eine unvergessliche Atmosphäre der Entspannung und des Genusses.
                 </p>
 
                 <ul className={styles.features}>
-                    <li className={styles.featureItem}>Regional & Seasonal Ingredients</li>
-                    <li className={styles.featureItem}>Exquisite Wine Selection</li>
-                    <li className={styles.featureItem}>Riverside Terrace Dining</li>
-                    <li className={styles.featureItem}>Modern & Elegant Atmosphere</li>
+                    <li className={styles.featureItem}>Regionale & saisonale Zutaten</li>
+                    <li className={styles.featureItem}>Exquisite Weinauswahl</li>
+                    <li className={styles.featureItem}>Speisen auf der Flussterrasse</li>
+                    <li className={styles.featureItem}>Moderne & elegante Atmosphäre</li>
                 </ul>
 
                 <button className={styles.ctaBtn} onClick={handleReservation}>
-                    Reserve Table
+                    Tisch reservieren
                 </button>
             </div>
         </div>

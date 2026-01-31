@@ -10,17 +10,17 @@ const AccommodationSlide = () => {
     const content = {
         das_elb: {
             label: 'Das Elb Restaurant',
-            title: 'Exquisite International Cuisine.',
-            price: '€12.90 - €45.00',
+            title: 'Exquisite internationale Küche.',
+            price: '12,90 € - 45,00 €',
             images: ['/images/restaurant_fine_dining.png'],
             features: [
-                'Dry-Aged Steaks & Seafood',
-                'Traditional Wiener Schnitzel',
-                'Authentic Asian Curries',
-                'Fresh & Healthy Bowls',
-                'Exclusive Desserts'
+                'Dry-Aged Steaks & Meeresfrüchte',
+                'Traditionelles Wiener Schnitzel',
+                'Authentische asiatische Currys',
+                'Frische & gesunde Bowls',
+                'Exklusive Desserts'
             ],
-            cta: 'VIEW MENU',
+            cta: 'SPEISEKARTE ANSEHEN',
             link: 'https://das-elb-frontend.onrender.com/'
         }
     };
@@ -80,10 +80,10 @@ const AccommodationSlide = () => {
                 <h3 className={styles.roomTitle}>{activeContent.title}</h3>
 
                 <div className={styles.priceBlock}>
-                    <span className={styles.priceLabel}>Price Range</span>
+                    <span className={styles.priceLabel}>Preisklasse</span>
                     <span className={styles.price}>{activeContent.price}</span>
                     <br />
-                    <span className={styles.priceSuffix}>/ per person</span>
+                    <span className={styles.priceSuffix}>/ pro Person</span>
                 </div>
 
                 <ul className={styles.features}>

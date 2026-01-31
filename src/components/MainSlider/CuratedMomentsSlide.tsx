@@ -15,9 +15,9 @@ const CuratedMomentsSlide = () => {
 
                     <div className={styles.overlayContent}>
                         <div className={styles.overlayText}>
-                            <h2 className={styles.sectionTitle}>Curated Moments</h2>
-                            <span className={styles.subtitle}>VISUAL IMPRESSIONS</span>
-                            <button className={styles.galleryBtn}>VIEW FULL GALLERY</button>
+                            <h2 className={styles.sectionTitle}>Ausgewählte Momente</h2>
+                            <span className={styles.subtitle}>VISUELLE IMPRESSIONEN</span>
+                            <button className={styles.galleryBtn}>ZUR GALERIE</button>
                         </div>
                     </div>
                 </div>

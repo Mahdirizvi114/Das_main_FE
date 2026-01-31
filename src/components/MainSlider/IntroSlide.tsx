@@ -7,13 +7,13 @@ const IntroSlide = () => {
             {/* Left: Text Content */}
             <div className={styles.contentCol}>
                 <span className={styles.label}>DAS ELB MAGDEBURG</span>
-                <h1 className={styles.title}>Where the River<br />Meets Luxury</h1>
+                <h1 className={styles.title}>Wo der Fluss<br />auf Luxus trifft</h1>
                 <p className={styles.description}>
-                    Experience the serenity of the Elbe combined with modern architectural brutality and soft hospitality.
+                    Erleben Sie die Ruhe der Elbe kombiniert mit moderner Architektur und herzlicher Gastfreundschaft.
                 </p>
                 <div className={styles.actions}>
-                    <button className={styles.primaryBtn}>CHECK IN</button>
-                    <button className={styles.secondaryBtn}>EXPLORE ROOMS</button>
+                    <button className={styles.primaryBtn}>JETZT BUCHEN</button>
+                    <button className={styles.secondaryBtn}>ZIMMER ANSEHEN</button>
                 </div>
             </div>
 
