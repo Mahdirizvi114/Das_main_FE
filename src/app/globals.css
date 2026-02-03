@@ -1,10 +1,12 @@
 :root {
-  --foreground-rgb: 26, 58, 50; /* Dark Green */
+  --foreground-rgb: 26, 58, 50;
+  /* Dark Green */
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 245, 245, 245;
-  
+
   --color-primary: #1a3a32;
-  --color-secondary: #c5a880; /* Gold/Beige accent */
+  --color-secondary: #c5a880;
+  /* Gold/Beige accent */
   --color-text: #1a3a32;
   --color-text-light: #6b7280;
   --white: #ffffff;
@@ -22,10 +24,15 @@ body {
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   color: var(--color-text);
-  background: var(--white);
+  /* background: var(--white); */
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
 }

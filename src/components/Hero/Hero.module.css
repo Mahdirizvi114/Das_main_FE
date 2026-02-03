@@ -1,12 +1,11 @@
 .hero {
     position: relative;
-    height: 90vh;
-    /* Slightly reduced to show content fold */
+    height: 100%;
     width: 100%;
     overflow: hidden;
     display: flex;
     align-items: center;
-    background: white;
+    background: transparent;
 }
 
 .videoContainer {
@@ -17,9 +16,7 @@
     height: 100%;
     z-index: 1;
     overflow: hidden;
-    /* If the video has a white background, we might not need mix-blend-mode if the hero bg is also white. 
-     But if there's overlap or we need to strip it: */
-    mix-blend-mode: multiply;
+    /* Removed mix-blend-mode to ensure visibility */
 }
 
 .waveVideo {
