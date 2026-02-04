@@ -27,31 +27,82 @@
 
 .card {
     pointer-events: auto;
-    /* 1. Semi-transparent background (White with 75% opacity) */
-    background: rgba(255, 255, 255, 0.75);
+    /* 1. The Light Source: A subtle gradient instead of flat white */
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.7) 100%);
 
-    /* 2. The Blur Magic */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    /* 2. The Blur: Increase this drastically. */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
 
-    /* 3. Soft rounded corners */
-    border-radius: 20px;
+    /* 3. The Edge: A crisp, semi-transparent border */
+    border: 1px solid rgba(255, 255, 255, 0.8);
 
-    /* 4. Subtle white border */
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    /* 4. The Depth: A soft, diffused shadow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 
-    /* 5. Soft shadow */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    /* 5. Rounding: Smooth corners */
+    border-radius: 30px;
 
+    /* 6. Text Color */
+    color: #1d1d1f;
+
+    /* Layout Fixes */
     width: 95%;
-    max-width: 1200px;
-    /* margin: 0 auto; handled by flex center in parent usually, but valid */
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    /* Centered with bottom gap */
 
     height: 75vh;
     min-height: 600px;
     display: flex;
     overflow: hidden;
-    /* Ensure border radius clips children */
+    position: relative;
+
+    /* Animation: Initial State (Invisible and pushed down) */
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+        box-shadow 0.4s ease,
+        backdrop-filter 0.4s ease;
+}
+
+/* Active State (Triggered by JS when scrolling) */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Deep Focus Hover */
+.card.visible:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 1);
+}
+
+/* Shimmer Effect */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.card:hover::before {
+    left: 150%;
+    transition: 0.7s ease-in-out;
 }
 
 .contentCol {
@@ -60,6 +111,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 10;
 }
 
 .imageCol {
@@ -121,7 +174,8 @@
 .title {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    line-height: 1.1;
+    line-height: 1.3;
+    padding-top: 0.2rem;
     margin-bottom: 1.5rem;
     font-weight: 500;
     color: var(--color-primary);

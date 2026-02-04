@@ -1,9 +1,30 @@
 'use client';
+import { useState, useEffect, useRef } from 'react';
 import styles from './CuratedMomentsSlide.module.css';
 
 const CuratedMomentsSlide = () => {
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${isVisible ? styles.visible : ''}`} ref={cardRef}>
             <div className={styles.visualContainer}>
                 {/* Left Column: Main Image */}
                 <div className={styles.leftColumn}>

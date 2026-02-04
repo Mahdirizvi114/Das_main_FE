@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './ConferenceSlide.module.css';
 
 const ConferenceSlide = () => {
@@ -59,8 +59,28 @@ const ConferenceSlide = () => {
         }
     };
 
+    const cardRef = useRef<HTMLDivElement>(null);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        if (cardRef.current) {
+            observer.observe(cardRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${isVisible ? styles.visible : ''}`} ref={cardRef}>
             {/* Left Col: Image Slider */}
             <div className={styles.imageCol}>
                 {activeContent.images.length > 1 && (
